@@ -1,9 +1,6 @@
-package com.app.backend.model;
+package com.app.backend.controller.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,9 +17,17 @@ import org.hibernate.annotations.DynamicUpdate;
 public class User {
 
     @Id
-    @Column(name="username")
-    private String userId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="userId")
+    private int id;
+
+    @Column(name = "userName")
+    private String userName;
 
     @Column(name="password")
     private String password;
+
+    public int getid() {
+        return id;
+    }
 }

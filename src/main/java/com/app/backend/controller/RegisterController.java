@@ -1,6 +1,6 @@
 package com.app.backend.controller;
 
-import com.app.backend.model.User;
+import com.app.backend.controller.model.User;
 import com.app.backend.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class RegisterController {
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody User userData) {
-        User user=repo.findByUserId(userData.getUserId());
+        User user=repo.findByUserId(userData.getid());
         if(user == null){
             return ResponseEntity.internalServerError().build();
         } else if(user.getPassword().equals(userData.getPassword())) {
