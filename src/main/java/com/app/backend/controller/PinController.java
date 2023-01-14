@@ -19,7 +19,7 @@ public class PinController {
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody Pin pinData) {
-        Pin pin =repo.findByPinID(pinData.getPinId());
-
+        Pin pin =repo.findByPinId(pinData.getPinId());
+        return ResponseEntity.ok(pin);
     }
 }

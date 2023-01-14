@@ -20,7 +20,7 @@ public class Pin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="pinID")
-    private int id;
+    private int pinId;
 
     private String locationName;
 
@@ -37,6 +37,6 @@ public class Pin {
     private String imageUrl;
 
     public int getPinId() {
-        return id;
+        return pinId;
     }
 }

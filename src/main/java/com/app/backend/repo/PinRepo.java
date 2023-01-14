@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PinRepo extends JpaRepository<Pin, String> {
 
-    Pin findByPinID(int id);
+    Pin findByPinId(int id);
 }

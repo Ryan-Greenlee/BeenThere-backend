@@ -19,7 +19,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="userId")
-    private int id;
+    private int userId;
 
     @Column(name = "userName")
     private String userName;
@@ -28,6 +28,6 @@ public class User {
     private String password;
 
     public int getid() {
-        return id;
+        return userId;
     }
 }
