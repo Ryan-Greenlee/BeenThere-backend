@@ -22,7 +22,7 @@ public class Pin implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(nullable = false, updatable = false, name="id")
     private Integer id;
     private String name;
     private String lat;
@@ -31,8 +31,9 @@ public class Pin implements Serializable {
     private String departDate;
     private String returnDate;
     private String log;
-
-
-
-
+    private String imageUrl1;
+    private String imageUrl2;
+    private String imageUrl3;
+    private String imageUrl4;
+    private String imageUrl5;
 }
